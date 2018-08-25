@@ -5,9 +5,10 @@ public class Test {
 
     public static void main(String[] args){
 
-        Human adam= new Human();
+        Sheep gunther= new Sheep();
 
-        Human adamClone = (Human)adam.makeCopy();
+        Sheep guyntherClone=(Sheep) CloneFactory.getClone(gunther);
 
     }
+
 }

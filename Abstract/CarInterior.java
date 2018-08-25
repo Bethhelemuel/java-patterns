@@ -1,7 +1,6 @@
 package Patterns.Abstract;
 
-public interface CarInterior{
+public interface CarInterior {
 
-    public String get();
-
+    public String request();
 }

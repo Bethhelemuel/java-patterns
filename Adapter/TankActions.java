@@ -2,8 +2,7 @@ package Patterns.Adapter;
 
 public interface TankActions {
 
-public void driveForward();
-public void shootCannon();
-public void assignDriver(String driver);
-
+    public void fire();
+    public void moveForward();
+    public void assignDrive(String name);
 }

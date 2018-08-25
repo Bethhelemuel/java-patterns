@@ -1,6 +1,6 @@
 package Patterns.Abstract.Audi;
 
-import Patterns.Abstract.Audi.A4.A4Factory;
+import Patterns.Abstract.Audi.A5.A5Factory;
 import Patterns.Abstract.Car;
 import Patterns.Abstract.CarBuilder;
 import Patterns.Abstract.CarFactory;
@@ -9,19 +9,20 @@ public class AudiCarBuilder extends CarBuilder {
 
 
     @Override
-    protected Car makeCar(String type) {
-
-        Car car= null;
-
-        if(type == "A4"){
+    public Car makeCar(String car) {
+       Car model=null;
 
 
-            CarFactory fac= new A4Factory();
-            car=new Audi(fac);
-            car.setName(type);
+       if(car.equals("A5")){
 
-        }
+           CarFactory a5Factory= new A5Factory();
 
-        return car;
+           model= new Audi(a5Factory);
+           model.setName("Audi A5");
+       }
+
+
+
+       return model;
     }
 }

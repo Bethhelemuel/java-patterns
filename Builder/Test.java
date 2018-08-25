@@ -2,25 +2,24 @@ package Patterns.Builder;
 
 public class Test {
 
+
     public static void main(String[] args){
 
-        RobotX robotX= new RobotX();
         RobotA robotA= new RobotA();
+        RobotX robotX= new RobotX();
 
 
-        RobotBuilder robotABuilder= new RobotBuilder(robotA);
-        RobotBuilder robotXBuilder= new RobotBuilder(robotX);
+        RobotFactory robotFactory= new RobotFactory(robotX);
 
+        Robot robot= (Robot)robotFactory.getRobot();
 
-        Robot robot= robotABuilder.getRobot();
-
-        System.out.println("---------------------------------------");
-
-        System.out.println("Robot head : "+ robot.getHead());
-        System.out.println("Robot torso : "+ robot.getTorso());
-        System.out.println("Robot legs : "+ robot.getLegs());
-
-        System.out.println("---------------------------------------");
-
+        System.out.println("-------------- Robot -------------");
+        System.out.println(" ");
+        System.out.println("Robot head "+robot.getRobotHead());
+        System.out.println("Robot torso "+robot.getRobotTorso());
+        System.out.println("Robot legs "+robot.getRobotLegs());
+        System.out.println(" ");
+        System.out.println("---------------------------------- ");
     }
+
 }

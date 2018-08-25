@@ -1,40 +1,33 @@
 package Patterns.Command.Devices;
 
-import Patterns.Command.ElectronicDevices;
+import Patterns.Command.ElectronicDevice;
 
-public class Radio implements ElectronicDevices {
+public class Radio implements ElectronicDevice {
 
-   private int volume=0;
+    private int volume;
+
     @Override
     public void On() {
-        System.out.println("Radio is On ! ");
+
+
+        System.out.println("Radio is on !");
+
     }
 
     @Override
     public void Off() {
-        System.out.println("Radio is Off !");
+        System.out.println("Radio is off !");
     }
 
     @Override
-    public void VolumeUp() {
-
+    public void volumeUp() {
         volume++;
-        System.out.println("Radio volume is at "+ volume);
-
+        System.out.println("Radio volume at "+ volume );
     }
 
-
-
     @Override
-    public void VolumeDown() {
-        if(volume <=0){
-
-        }
-
-        else{
-            volume--;
-        }
-
-        System.out.println("Radio volume is at "+ volume);
+    public void volumeDown() {
+        volume--;
+        System.out.println("Radio volume at "+ volume );
     }
 }

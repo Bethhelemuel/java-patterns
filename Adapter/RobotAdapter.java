@@ -1,31 +1,30 @@
 package Patterns.Adapter;
 
-public class RobotAdapter implements TankActions{
+public class RobotAdapter implements TankActions {
 
-   private Robot robot;
-
-   public RobotAdapter(Robot r){
-
-       this.robot= r;
-   }
-
-    @Override
-    public void driveForward() {
+    private Robot robot;
 
 
-        robot.walk();
+    public RobotAdapter(Robot r){
+
+        this.robot=r;
     }
 
     @Override
-    public void shootCannon() {
+    public void fire() {
 
-       robot.punch();
+        this.robot.punch();
     }
 
     @Override
-    public void assignDriver(String driver) {
+    public void moveForward() {
 
-       robot.interActWithHuman(driver);
+        this.robot.walk();
+    }
 
+    @Override
+    public void assignDrive(String name) {
+
+        this.robot.assignHuman(name);
     }
 }

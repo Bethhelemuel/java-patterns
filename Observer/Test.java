@@ -2,16 +2,18 @@ package Patterns.Observer;
 
 public class Test {
 
-
     public static void main(String[] args){
 
-            StockGrabber stockGrabber= new StockGrabber();
-            StockObserver stockObserver= new StockObserver(stockGrabber);
+        StockGrabber stockGrabber= new StockGrabber();
 
 
-            stockGrabber.setApplePrice(10000);
-            stockGrabber.setGooglePrice(6300);
-            stockGrabber.setIbmPrice(5000);
 
+        StockObserver stockObserver= new StockObserver(stockGrabber);
+        StockObserver stockObserver2= new StockObserver(stockGrabber);
+
+
+        stockGrabber.setApple(50);
+        stockGrabber.setGoogle(100);
+        stockGrabber.setIbm(20);
     }
 }

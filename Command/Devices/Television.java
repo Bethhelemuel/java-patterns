@@ -1,39 +1,33 @@
 package Patterns.Command.Devices;
 
-import Patterns.Command.ElectronicDevices;
+import Patterns.Command.ElectronicDevice;
 
-public class Television implements ElectronicDevices {
+public class Television implements ElectronicDevice {
 
-   private int volume=0;
+    private int volume;
+
     @Override
     public void On() {
-        System.out.println("TV is On !");
+
+
+        System.out.println("TV is on !");
+
     }
 
     @Override
     public void Off() {
-        System.out.println("TV is Off !");
+        System.out.println("TV is off !");
     }
 
     @Override
-    public void VolumeUp() {
-
+    public void volumeUp() {
         volume++;
-        System.out.println("TV volume is at "+ volume);
-
+        System.out.println("TV volume at "+ volume );
     }
 
-
     @Override
-    public void VolumeDown() {
-        if(volume <=0){
-
-        }
-
-        else{
-            volume--;
-        }
-
-        System.out.println(" TV volume is at "+ volume);
+    public void volumeDown() {
+        volume--;
+        System.out.println("TV volume at "+ volume );
     }
 }

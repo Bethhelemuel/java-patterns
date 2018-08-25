@@ -1,38 +1,37 @@
 package Patterns.Command;
 
-public class Remote implements ElectronicDevices {
+public class Remote {
 
-    Command on;
-    Command off;
-    Command volumeUp;
-    Command volumeDown;
 
-    public Remote(Command on,Command off,Command volumeUp, Command volumeDown){
+    private Command on,off,volumeUp,volumeDown;
 
-        this.on=on;
+
+    public Remote(Command on,Command off, Command volumeUp,Command volumeDown){
+
         this.off=off;
-        this.volumeUp=volumeUp;
+        this.on=on;
         this.volumeDown=volumeDown;
+        this.volumeUp=volumeUp;
     }
 
 
-    @Override
-    public void On() {
-        this.on.execute();
+    public void on(){
+
+        on.execute();
     }
 
-    @Override
-    public void Off() {
-        this.off.execute();
+    public void off(){
+
+        off.execute();
     }
 
-    @Override
-    public void VolumeUp() {
-this.volumeUp.execute();
+    public void volumeUp(){
+
+        volumeUp.execute();
     }
 
-    @Override
-    public void VolumeDown() {
-this.volumeDown.execute();
+    public void volumeDown(){
+
+        volumeDown.execute();
     }
 }

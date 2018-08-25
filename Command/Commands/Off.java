@@ -1,20 +1,23 @@
 package Patterns.Command.Commands;
 
 import Patterns.Command.Command;
-import Patterns.Command.ElectronicDevices;
+import Patterns.Command.ElectronicDevice;
 
 public class Off implements Command {
 
-    ElectronicDevices device;
 
-    public Off(ElectronicDevices device){
+    private ElectronicDevice electronicDevice;
 
-        this.device=device;
+    public Off(ElectronicDevice electronicDevice){
+
+        this.electronicDevice=electronicDevice;
+
     }
+
 
     @Override
     public void execute() {
 
-        device.Off();
+        electronicDevice.Off();
     }
 }

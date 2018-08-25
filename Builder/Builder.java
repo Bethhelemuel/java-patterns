@@ -2,9 +2,10 @@ package Patterns.Builder;
 
 public interface Builder {
 
-    public void BuildHead();
-    public void BuildTorso();
-    public void BuildLegs();
+    public void buildHead();
+    public void buildTorso();
+    public void buildLegs();
 
     public Robot getRobot();
+
 }

@@ -2,33 +2,31 @@ package Patterns.Builder;
 
 public class Robot {
 
-    private String head;
-    private String torso;
-    private String legs;
+    String robotHead;
+    String robotTorso;
+    String robotLegs;
 
-
-    public String getHead() {
-        return head;
+    public String getRobotHead() {
+        return robotHead;
     }
 
-    public void setHead(String head) {
-        this.head = head;
+    public void setRobotHead(String robotHead) {
+        this.robotHead = robotHead;
     }
 
-    public String getTorso() {
-        return torso;
+    public String getRobotTorso() {
+        return robotTorso;
     }
 
-    public void setTorso(String torso) {
-        this.torso = torso;
+    public void setRobotTorso(String robotTorso) {
+        this.robotTorso = robotTorso;
     }
 
-    public String getLegs() {
-        return legs;
+    public String getRobotLegs() {
+        return robotLegs;
     }
 
-    public void setLegs(String legs) {
-        this.legs = legs;
+    public void setRobotLegs(String robotLegs) {
+        this.robotLegs = robotLegs;
     }
-
 }

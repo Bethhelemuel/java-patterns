@@ -1,24 +1,24 @@
 package Patterns.Abstract.Audi;
 
-import Patterns.Abstract.Car;
-import Patterns.Abstract.CarFactory;
+import Patterns.Abstract.*;
 
 public class Audi extends Car {
 
-    private CarFactory carFactory;
 
-    public Audi(CarFactory carFactory){
-
-      this.carFactory=carFactory;
-
+    public Audi(CarFactory carFactory) {
+        super(carFactory);
     }
 
     @Override
-    protected void makeCar() {
+    public void makeCar() {
 
-            engine=carFactory.addEngine();
-            exterior=carFactory.addBody();
-            interior=carFactory.addInterior();
+        carEngine=carFactory.getEngine();
+        carInterior=carFactory.getInterior();
+        carExterior=carFactory.getExterior();
+    }
 
+    @Override
+    public void setName(String name) {
+        super.setName(name);
     }
 }

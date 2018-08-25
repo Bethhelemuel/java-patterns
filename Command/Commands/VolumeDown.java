@@ -1,20 +1,23 @@
 package Patterns.Command.Commands;
 
 import Patterns.Command.Command;
-import Patterns.Command.ElectronicDevices;
+import Patterns.Command.ElectronicDevice;
 
 public class VolumeDown implements Command {
 
-    ElectronicDevices device;
 
-    public VolumeDown(ElectronicDevices device){
+    private ElectronicDevice electronicDevice;
 
-        this.device=device;
+    public VolumeDown(ElectronicDevice electronicDevice){
+
+        this.electronicDevice=electronicDevice;
+
     }
+
 
     @Override
     public void execute() {
 
-        device.VolumeDown();
+        electronicDevice.volumeDown();
     }
 }

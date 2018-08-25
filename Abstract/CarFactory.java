@@ -3,10 +3,7 @@ package Patterns.Abstract;
 public interface CarFactory {
 
 
-    CarEngine addEngine();
-    CarInterior addInterior();
-    CarBody addBody();
-
-
-
+     CarEngine  getEngine();
+     CarInterior getInterior();
+     CarExterior  getExterior();
 }

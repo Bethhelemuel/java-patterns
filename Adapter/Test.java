@@ -5,16 +5,17 @@ public class Test {
 
     public static void main(String[] args){
 
-        Tank t10x= new Tank();
-        Robot robotX= new Robot();
 
-        RobotAdapter robotAdapter=new RobotAdapter(robotX);
-
-        TankControls tankControls= new TankControls(robotAdapter);
+        Tank tank= new Tank();
+        Robot robot= new Robot();
+        RobotAdapter robotAdapter= new RobotAdapter(robot);
 
 
-        tankControls.attack();
-        tankControls.moveForward();
-        tankControls.assignDriver("John");
+        Tanker tanker= new Tanker(robotAdapter);
+
+            tanker.fire();
+            tanker.moveForward();
+            tanker.assignDrivver("John");
+
     }
 }

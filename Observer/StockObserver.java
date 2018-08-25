@@ -1,37 +1,36 @@
 package Patterns.Observer;
 
-public class StockObserver implements  Observer {
+public class StockObserver implements Observer {
 
-    private double ibm;
-    private double google;
-    private double apple;
+    int google,apple,ibm;
+    private Subject subject;
 
-    private static int Tracer=0;
-    private int observerID;
+    int observerNum=0;
 
+    public StockObserver(Subject s){
 
-    private StockGrabber stockGrabber;
+        s.register(this);
 
-    public StockObserver(StockGrabber stockGrabber){
+        observerNum++;
+        System.out.println("Observer added  id :"+observerNum);
 
-        this.stockGrabber=stockGrabber;
-        this.observerID=++Tracer;
-
-        stockGrabber.register(this);
-        System.out.println("---------- Observer "+this.observerID+" ------------" );
 
     }
-    @Override
-    public void update(double ibm, double google, double apple) {
 
-        this.ibm=ibm;
+    @Override
+    public void update(int google, int apple, int ibm) {
+
         this.google=google;
         this.apple=apple;
+        this.ibm=ibm;
 
-        System.out.println( " ");
-        System.out.println(" IBM : " + this.ibm );
-        System.out.println(" Google : " + this.google );
-        System.out.println(" apple : " + this.apple );
-        System.out.println( " ");
+        this.print();
+    }
+
+    public void print(){
+
+        System.out.println(" google "+google);
+        System.out.println(" apple "+apple);
+        System.out.println(" ibm "+ibm);
     }
 }

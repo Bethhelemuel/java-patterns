@@ -2,32 +2,33 @@ package Patterns.Abstract;
 
 public abstract class Car {
 
+    public CarEngine carEngine;
+    public CarExterior carExterior;
+    public CarInterior carInterior;
+
     public String name;
 
-   public  CarEngine engine;
-   public CarInterior interior;
-   public CarBody exterior;
+    public void setName(String name){this.name=name;}
+    public  CarFactory carFactory;
 
-    protected abstract void makeCar();
+    public Car(CarFactory carFactory){
 
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+        this.carFactory=carFactory;
     }
 
 
-    public String displayCar(){
 
+    public  String displayInfo(){
+        return "Name : "+name
+                +"\nEngine : "+carEngine.request()
+                +"\nInterior : "+carInterior.request()
+                +"\nExterior : "+carExterior.request();
 
-        return " Car : "+this.getName()+"\n"+interior.get()+"\n"+exterior.get()+"\n"+engine.get();
     }
 
 
 
 
 
+    public abstract void makeCar();
 }

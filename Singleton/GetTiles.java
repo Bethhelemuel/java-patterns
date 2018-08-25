@@ -1,32 +1,32 @@
 package Patterns.Singleton;
 
-public class GetTiles implements  Runnable {
-    int tiles;
+public class GetTiles implements Runnable{
 
-    public GetTiles(int tiles){
 
-        this.tiles=tiles;
+   private int number;
 
-    }
+   public GetTiles(int number){
+
+       this.number=number;
+
+
+   }
 
     @Override
     public void run() {
-
-        Singleton instance= Singleton.getInstance();
+        Player player=Player.getInstance();
 
 
         System.out.println(" ");
-        System.out.println(instance.getNumberList());
+        System.out.println("----------------------------------------------------------- ");
+        System.out.println(player.getNumberList());
+        System.out.println("id "+ System.identityHashCode(player));
+
+        System.out.println("---------------------------------------------------------- ");
         System.out.println(" ");
-
-
-        System.out.println("instance "+ System.identityHashCode(instance));
-
-        System.out.println(instance.getNumbers(this.tiles));
-
-        System.out.println(" ");
+        System.out.println("Player  ");
         System.out.println(" ");
         System.out.println(" ");
-
+        System.out.println("Player  "+player.getTiles(number));
     }
 }

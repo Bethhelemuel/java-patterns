@@ -1,40 +1,33 @@
 package Patterns.Command.Devices;
 
-import Patterns.Command.ElectronicDevices;
+import Patterns.Command.ElectronicDevice;
 
-public class Phone implements ElectronicDevices {
+public class Phone implements ElectronicDevice {
 
-   private int volume=0;
+    private int volume;
+
     @Override
     public void On() {
-        System.out.println("Phone is on");
+
+
+        System.out.println("Phone is on !");
+
     }
 
     @Override
     public void Off() {
-        System.out.println("Phone is on");
+        System.out.println("Phone is off !");
     }
 
     @Override
-    public void VolumeUp() {
-
+    public void volumeUp() {
         volume++;
-        System.out.println("Phone is at "+ volume);
-
+        System.out.println("Phone volume at "+ volume );
     }
 
-
-
     @Override
-    public void VolumeDown() {
-        if(volume <=0){
-
-        }
-
-        else{
-            volume--;
-        }
-
-        System.out.println("Phone is at "+ volume);
+    public void volumeDown() {
+        volume--;
+        System.out.println("Phone volume at "+ volume );
     }
 }

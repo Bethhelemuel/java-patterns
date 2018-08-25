@@ -1,35 +1,33 @@
 package Patterns.Builder;
 
-public class RobotX implements  Builder{
+public class RobotX implements  Builder {
 
-    private Robot r;
+        private Robot robot;
 
-    public RobotX(){
 
-        this.r= new Robot();
+        public RobotX(){
+
+            robot= new Robot();
+        }
+
+    @Override
+    public void buildHead() {
+
+            robot.setRobotHead("Robot X metalic head");
     }
 
     @Override
-    public void BuildHead() {
-
-        r.setHead("Robot X Super --head");
+    public void buildTorso() {
+            robot.setRobotTorso("Robot X gold Torso");
     }
 
     @Override
-    public void BuildTorso() {
-
-        r.setTorso("Robot X torso Platinum ");
-    }
-
-    @Override
-    public void BuildLegs() {
-
-        r.setLegs("Robot X  super gold legs");
-
+    public void buildLegs() {
+            robot.setRobotLegs("Robot X platinum legs");
     }
 
     @Override
     public Robot getRobot() {
-        return r;
+        return this.robot;
     }
 }

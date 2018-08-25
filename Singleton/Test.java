@@ -2,31 +2,20 @@ package Patterns.Singleton;
 
 public class Test {
 
+
     public static void main(String[] args){
 
-Singleton instance1= Singleton.getInstance();
-Singleton instance2= Singleton.getInstance();
+        Player player= Player.getInstance();
+        Player player2= Player.getInstance();
 
-
-System.out.println(" ");
-        System.out.println("---------------------------------------------------");
-
-System.out.println(instance1.getNumberList());
-        System.out.println("---------------------------------------------------");
-
-System.out.println(" ");
-
-System.out.println("First instance "+ System.identityHashCode(instance1));
-
-        System.out.println(instance1.getNumbers(2));
-
-System.out.println(" ");
-System.out.println(" ");
-System.out.println(" ");
-
-
-
-System.out.println("Second instance "+ System.identityHashCode(instance2));
-        System.out.println(instance2.getNumbers(11));
+        System.out.println(player.getNumberList());
+        System.out.println(" ");
+        System.out.println("Player 1 ");
+        System.out.println(" ");
+        System.out.println("Player 1 "+player.getTiles(14));
+        System.out.println(" ");System.out.println(" ");System.out.println(" ");
+        System.out.println("Player 2 ");
+        System.out.println(" ");
+        System.out.println("Player 2 "+player.getTiles(4));
     }
 }

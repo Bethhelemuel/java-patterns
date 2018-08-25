@@ -3,7 +3,7 @@ package Patterns.Observer;
 public interface Subject {
 
 
-    void register(Observer o);
-    void unregister(Observer o);
-    void notifyObserver();
+    public void register(Observer o);
+    public void unregister(Observer o);
+    public void notifyObservers();
 }

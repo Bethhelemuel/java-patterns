@@ -4,15 +4,16 @@ public abstract class CarBuilder {
 
 
 
-    protected abstract Car makeCar(String type);
-
-    public Car create(String type){
-
-        Car c= makeCar(type);
-
-        c.makeCar();
+    public abstract Car makeCar(String car);
 
 
-        return c;
+    public Car createCar(String car){
+
+        Car model=null;
+
+        model=makeCar(car);
+
+
+        return  model;
     }
 }
